@@ -12,7 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 const DATA = ['New York City', 'Tokyo', 'Delhi', 'Shanghai', 'Mexico City', 'Buenos Aires', 'Paris', 'London', 'Madrid'];
 
-const UserBar = (props) => {
+const UserBar = ({ updateLocation }) => {
   const [notifications, setNotifications] = useState(true);
 
   const renderLocations = () => {
@@ -51,7 +51,7 @@ const UserBar = (props) => {
           arrowColor={colors.gigas}
           searchable={true}
 
-          onChangeItem={item => props.updateLocation(item.value)}
+          onChangeItem={item => updateLocation(item.value)}
         />
       </View>
 
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   avatar: {
     width: 44,
     height: 44,
-    resizeMode: 'contain',
+    resizeMode: 'cover',
   },
   roundWrapper: {
     width: 50,

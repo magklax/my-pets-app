@@ -29,6 +29,10 @@ const CatalogScreen = ({ navigation }) => {
     navigation.navigate('Profile', { item: pet });
   }
 
+  const goToHome = (page) => {
+    navigation.navigate(page);
+  }
+
   return (
     <View style={styles.wrapper}>
       <UserBar updateLocation={updateLocation} />
@@ -38,7 +42,7 @@ const CatalogScreen = ({ navigation }) => {
         location={location}
         goToProfile={goToProfile}
       />
-      <TabBar />
+      <TabBar handlePress={goToHome} />
     </View >
   )
 }

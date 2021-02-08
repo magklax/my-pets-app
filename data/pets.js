@@ -5,7 +5,7 @@ import dog4 from '../assets/images/dog-4.png';
 import cat1 from '../assets/images/cat-1.png';
 import cat2 from '../assets/images/cat-2.png';
 
-const DOGS = [
+const PETS = [
   {
     name: 'Pokki',
     type: 'dogs',
@@ -62,4 +62,4 @@ const DOGS = [
   },
 ];
 
-export { DOGS };
+export { PETS };

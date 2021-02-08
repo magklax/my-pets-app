@@ -2,31 +2,36 @@ import React from 'react';
 import {
   View,
   StyleSheet,
-  FlatList,
   TouchableOpacity
 } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 import colors from '../config/colors';
 
-const TabItem = ({ name }) => {
+const TabItem = (props) => {
   return (
     <TouchableOpacity
-      style={[
-        styles.roundWrapper,
-        styles.iconWrapper,
-        styles.boxShadows,
-      ]}
+      onPress={() => {
+        if (props.page) {
+          props.handlePress(props.page);
+        }
+      }}
+      style={
+        [
+          styles.roundWrapper,
+          styles.iconWrapper,
+          styles.boxShadows,
+        ]}
     >
-      <AntDesign name={name} size={20} color={colors.gigas} />
-    </TouchableOpacity>
+      <AntDesign name={props.name} size={20} color={colors.gigas} />
+    </TouchableOpacity >
   )
 }
 
-const TabBar = () => {
+const TabBar = ({ handlePress }) => {
   return (
     <View style={styles.bar}>
-      <TabItem name="home" />
+      <TabItem name="home" handlePress={handlePress} page="Home" />
       <TabItem name="message1" />
       <TabItem name="hearto" />
       <TabItem name="user" />

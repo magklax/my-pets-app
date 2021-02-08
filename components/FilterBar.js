@@ -32,10 +32,10 @@ const FilterElement = (type, callback) => {
   )
 }
 
-const FilterBar = (props) => {
+const FilterBar = ({ updateTypes }) => {
   return (
     <View style={styles.bar}>
-      {TYPES.map((type) => FilterElement(type, props.updateTypes))}
+      {TYPES.map((type) => FilterElement(type, updateTypes))}
     </View >
   )
 }

@@ -5,7 +5,6 @@ import {
   Image,
 } from 'react-native';
 
-import Gallery from '../components/Gallery';
 import SwiperComponent from '../components/Swiper';
 import ButtonElement from '../components/Button';
 
@@ -24,6 +23,8 @@ const HomeScreen = ({ navigation }) => {
   )
 }
 
+export default HomeScreen;
+
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
@@ -33,5 +34,3 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
 });
-
-export default HomeScreen;

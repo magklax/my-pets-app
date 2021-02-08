@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import ButtonElement from '../components/Button';
 
-import { DOGS } from '../data/dogs';
 import colors from '../config/colors';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';

@@ -8,7 +8,6 @@ import {
 import HomeScreen from './screens/home';
 import CatalogScreen from './screens/catalog';
 import ProfileScreen from './screens/profile';
-import colors from './config/colors';
 
 const Stack = createStackNavigator();
 
